@@ -42,11 +42,14 @@ Describe "Resolve-Tool" {
     }
 
     It "dowloads nuget.exe if it does not exists in local search paths" {
+        $orig_path = $env:path
+        $env:path = ''
         $exe = "$testPath/nuget.exe"
         Test-Path $exe | Should -Be $false
         $result = Resolve-Tool $exe $nuget_url
         Test-Path $result | Should -Be $true
         $result | Should -Be $exe
+        $env:path = $orig_path
     }
 
     It "finds exe in alternative search path" {
