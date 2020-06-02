@@ -30,6 +30,14 @@ param(
 . ./_tools/helpers.ps1
 Bootstrap-IB $Tasks $MyInvocation $PSBoundParameters -config $config
 
+
+# check for tools
+Enter-Build  {
+    # example: search PATH and under "Program Files" 
+    $script:7z = Resolve-Tool "7z.exe"  -search "c:/Program Files/7-Zip"
+    Write-Output "7Z found at : $7z"
+}
+
 # ------------------------------------------------------
 # build script starts here
 # ------------------------------------------------------
