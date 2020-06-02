@@ -1,4 +1,4 @@
-# Powershell LocalToolBoostrapper
+# Powershell LocalToolBootstrapper
 
 This little framework helps to bootstrap tools for local script
 execution with as little prerequistes as possible and in a way, that
@@ -33,4 +33,4 @@ The implemnted example shows how to use this together with
 
 1. copy content of the `src` directory to your project root
 2. rename `Powershell-Build-Template.build.ps` to `yourproject.build.ps1`
-3. implement build steps within the powershell build script ;-) 
+3. implement build steps within the powershell build script :-)
