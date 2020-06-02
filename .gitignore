@@ -1,0 +1,7 @@
+# distribution artifact output directory
+/src/dist/
+/src/build/
+
+# ignore buildtool nuget/choco packages, but keep toold dependency definition
+/src/_tools/pkg
+/src/_tools/psm

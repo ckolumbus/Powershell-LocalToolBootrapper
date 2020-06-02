@@ -1,0 +1,8 @@
+# ignore buildtool nuget/choco packages, but keep toold dependency definition
+_tools/pkg/*
+!_tools/pkg/packages.config
+
+_tools/psm/*
+!_tools/psm/packages.config
+
+_tools/nuget.exe
